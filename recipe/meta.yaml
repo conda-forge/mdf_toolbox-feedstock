@@ -28,6 +28,8 @@ requirements:
 test:
   imports:
     - mdf_toolbox
+  commands:
+    - pip check
 
 about:
   home: https://github.com/materials-data-facility/toolbox
