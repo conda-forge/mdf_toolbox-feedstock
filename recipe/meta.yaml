@@ -20,6 +20,7 @@ requirements:
     - pip
   run:
     - python >=3.5
+    - pip
     - globus-nexus-client >=0.2.8
     - globus-sdk >=1.7.0
     - requests >=2.18.4
