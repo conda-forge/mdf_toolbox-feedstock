@@ -1,5 +1,5 @@
 {% set name = "mdf_toolbox" %}
-{% set version = "0.5.1" %}
+{% set version = "0.5.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 0a8c156569c2facccc4e5cd63feef1b314414cefd6ac568473190fb73afb2f21
+  sha256: 800525741361b348538bed27af22d5db97deb39b72e27173e7c420a3eec31b6a
 
 build:
   noarch: python
   number: 0
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
@@ -37,7 +37,7 @@ about:
   license: Apache-2.0
   license_family: Apache
   license_file: LICENSE
-  summary: 'Toolbox is a collection of the Materials Data Facility tools and utilities.'
+  summary: Toolbox is a collection of the Materials Data Facility tools and utilities.
 
   description: |
     Toolbox is a collection of the Materials Data Facility tools and utilities.
