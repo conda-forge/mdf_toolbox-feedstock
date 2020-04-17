@@ -25,6 +25,7 @@ requirements:
     - globus-sdk >=1.7.0
     - requests >=2.18.4
     - fair-research-login
+    - jsonschema
 
 test:
   imports:
