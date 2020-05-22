@@ -1,5 +1,5 @@
 {% set name = "mdf_toolbox" %}
-{% set version = "0.5.3" %}
+{% set version = "0.5.4" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 79df5777b9ae6b9d4fc00f67baf42ec87a19115f34c4e5ce70e869cba9b770e1
+  sha256: eba84826ef93739df2094480bb03ab6e091db2f0664561703c85c8070b69d5cb
 
 build:
   noarch: python
