@@ -16,10 +16,10 @@ build:
 
 requirements:
   host:
-    - python >=3.5
+    - python >=3.6
     - pip
   run:
-    - python >=3.5
+    - python >=3.6
     - pip
     - globus-nexus-client >=0.2.8
     - globus-sdk >=1.7.0
