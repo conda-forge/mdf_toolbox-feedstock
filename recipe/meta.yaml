@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://github.com/materials-data-facility/toolbox/archive/{{ version }}.tar.gz
   sha256: dcdcc7c0aea4bceb7e4b11ef5e72d061490513d56c7c2b11c6f40a8971387c74
 
 build:
