@@ -1,13 +1,15 @@
 {% set name = "mdf_toolbox" %}
-{% set version = "0.5.4" %}
+{% set version = "0.5.5" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: eba84826ef93739df2094480bb03ab6e091db2f0664561703c85c8070b69d5cb
+  url: https://github.com/materials-data-facility/toolbox/archive/{{ version }}.tar.gz
+  sha256: ac12fec96abe9e22aa3f679ff9a2fe2aafb59cbdce3a22113e0dc532b32394fc
+  patches:
+    - setup.patch
 
 build:
   noarch: python
@@ -16,10 +18,10 @@ build:
 
 requirements:
   host:
-    - python >=3.5
+    - python >=3.6
     - pip
   run:
-    - python >=3.5
+    - python >=3.6
     - pip
     - globus-nexus-client >=0.2.8
     - globus-sdk >=1.7.0

@@ -5,9 +5,13 @@ Home: https://github.com/materials-data-facility/toolbox
 
 Package license: Apache-2.0
 
-Feedstock license: BSD 3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/mdf_toolbox-feedstock/blob/master/LICENSE.txt)
 
 Summary: Toolbox is a collection of the Materials Data Facility tools and utilities.
+
+Development: https://github.com/materials-data-facility/toolbox
+
+Documentation: https://github.com/materials-data-facility/toolbox
 
 Toolbox is a collection of the Materials Data Facility tools and utilities.
 
