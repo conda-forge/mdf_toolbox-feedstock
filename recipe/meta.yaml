@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/materials-data-facility/toolbox/archive/{{ version }}.tar.gz
-  sha256: dcdcc7c0aea4bceb7e4b11ef5e72d061490513d56c7c2b11c6f40a8971387c74
+  sha256: ac12fec96abe9e22aa3f679ff9a2fe2aafb59cbdce3a22113e0dc532b32394fc
 
 build:
   noarch: python
