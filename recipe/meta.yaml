@@ -1,5 +1,5 @@
 {% set name = "mdf_toolbox" %}
-{% set version = "0.5.6" %}
+{% set version = "0.5.7" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/materials-data-facility/toolbox/archive/{{ version }}.tar.gz
-  sha256: b06f7740943075f9ba43509ac926265533b9f8d17ea6cc74c1de490b3c01983a
+  sha256: d27837a2d8bfcc420e00f2b56f269e9618d0e97a2514e97b3d784208d2cd0ef6
 
 build:
   noarch: python
