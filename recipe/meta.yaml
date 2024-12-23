@@ -11,15 +11,15 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
-    - python >=3.6
+    - python {{ python_min }}
     - pip
   run:
-    - python >=3.6
+    - python >={{ python_min }}
     - pip
     - globus-nexus-client >=0.2.8
     - globus-sdk >=1.7.0
@@ -28,6 +28,8 @@ requirements:
     - jsonschema <=4.3.0
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - mdf_toolbox
   commands:
