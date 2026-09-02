@@ -15,15 +15,15 @@ Documentation: https://github.com/materials-data-facility/toolbox
 
 Toolbox is a collection of the Materials Data Facility tools and utilities.
 
-
 Current build status
 ====================
 
 
-<table><tr><td>All platforms:</td>
+<table><tr>
+    <td>All platforms:</td>
     <td>
-      <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=8135&branchName=main">
-        <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/mdf_toolbox-feedstock?branchName=main">
+      <a href="https://github.com/conda-forge/mdf_toolbox-feedstock/actions/workflows/conda-build.yml">
+        <img src="https://github.com/conda-forge/mdf_toolbox-feedstock/actions/workflows/conda-build.yml/badge.svg?event=push&branch=main">
       </a>
     </td>
   </tr>
@@ -34,7 +34,7 @@ Current release info
 
 | Name | Downloads | Version | Platforms |
 | --- | --- | --- | --- |
-| [![Conda Recipe](https://img.shields.io/badge/recipe-mdf_toolbox-green.svg)](https://anaconda.org/conda-forge/mdf_toolbox) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/mdf_toolbox.svg)](https://anaconda.org/conda-forge/mdf_toolbox) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/mdf_toolbox.svg)](https://anaconda.org/conda-forge/mdf_toolbox) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/mdf_toolbox.svg)](https://anaconda.org/conda-forge/mdf_toolbox) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-mdf__toolbox-green.svg)](https://anaconda.org/conda-forge/mdf_toolbox) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/mdf_toolbox.svg)](https://anaconda.org/conda-forge/mdf_toolbox) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/mdf_toolbox.svg)](https://anaconda.org/conda-forge/mdf_toolbox) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/mdf_toolbox.svg)](https://anaconda.org/conda-forge/mdf_toolbox) |
 
 Installing mdf_toolbox
 ======================
@@ -46,31 +46,73 @@ conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `mdf_toolbox` can be installed with `conda`:
+How to use
+----------
+
+<details>
+<summary>With conda</summary>
 
 ```
 conda install mdf_toolbox
 ```
 
-or with `mamba`:
+</details>
+
+<details>
+<summary>With mamba</summary>
 
 ```
 mamba install mdf_toolbox
 ```
 
-It is possible to list all of the versions of `mdf_toolbox` available on your platform with `conda`:
+</details>
+
+<details>
+<summary>With pixi</summary>
+
+```
+# for adding to your local project
+pixi add mdf_toolbox
+# for installing globally
+pixi global install mdf_toolbox
+```
+
+</details>
+
+Search package versions
+-----------------------
+
+It is possible to list all of the versions of `mdf_toolbox` available on your platform:
+
+<details>
+<summary>With conda</summary>
 
 ```
 conda search mdf_toolbox --channel conda-forge
 ```
 
-or with `mamba`:
+</details>
+
+<details>
+<summary>With mamba</summary>
 
 ```
 mamba search mdf_toolbox --channel conda-forge
 ```
 
-Alternatively, `mamba repoquery` may provide more information:
+</details>
+
+<details>
+<summary>With pixi</summary>
+
+```
+pixi search mdf_toolbox --channel conda-forge
+```
+
+</details>
+
+<details>
+<summary>With mamba repoquery, which may provide more information</summary>
 
 ```
 # Search all versions available on your platform:
@@ -82,6 +124,8 @@ mamba repoquery whoneeds mdf_toolbox --channel conda-forge
 # List dependencies of `mdf_toolbox`:
 mamba repoquery depends mdf_toolbox --channel conda-forge
 ```
+
+</details>
 
 
 About conda-forge
@@ -105,12 +149,12 @@ it is possible to build and upload installable packages to the
 [conda-forge](https://anaconda.org/conda-forge) [anaconda.org](https://anaconda.org/)
 channel for Linux, Windows and OSX respectively.
 
-To manage the continuous integration and simplify feedstock maintenance
+To manage the continuous integration and simplify feedstock maintenance,
 [conda-smithy](https://github.com/conda-forge/conda-smithy) has been developed.
 Using the ``conda-forge.yml`` within this repository, it is possible to re-render all of
 this feedstock's supporting files (e.g. the CI configuration files) with ``conda smithy rerender``.
 
-For more information please check the [conda-forge documentation](https://conda-forge.org/docs/).
+For more information, please check the [conda-forge documentation](https://conda-forge.org/docs/).
 
 Terminology
 ===========
@@ -137,7 +181,7 @@ merged, the recipe will be re-built and uploaded automatically to the
 everybody to install and use from the `conda-forge` channel.
 Note that all branches in the conda-forge/mdf_toolbox-feedstock are
 immediately built and any created packages are uploaded, so PRs should be based
-on branches in forks and branches in the main repository should only be used to
+on branches in forks, and branches in the main repository should only be used to
 build distinct package versions.
 
 In order to produce a uniquely identifiable distribution:

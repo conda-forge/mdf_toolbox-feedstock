@@ -1,0 +1,56 @@
+schema_version: 1
+
+context:
+  name: mdf_toolbox
+  version: 0.7.1
+
+package:
+  name: ${{ name|lower }}
+  version: ${{ version }}
+
+source:
+  url: https://github.com/materials-data-facility/toolbox/archive/${{ version }}.tar.gz
+  sha256: e59c234c3f1769dcc7e8bd7996192c8651e2237700bd73c671b48358d19f01af
+
+build:
+  number: 2
+  noarch: python
+  script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+
+requirements:
+  host:
+    - python ${{ python_min }}.*
+    - pip
+    - setuptools
+  run:
+    - python >=${{ python_min }}
+    - pip
+    - globus-nexus-client >=0.2.8
+    - globus-sdk >=1.7.0
+    - requests >=2.18.4
+    - fair-research-login
+    - jsonschema <=4.3.0
+
+tests:
+  - python:
+      imports:
+        - mdf_toolbox
+      pip_check: true
+      python_version:
+        - ${{ python_min }}
+        - "*"
+
+about:
+  license: Apache-2.0
+  license_file: LICENSE
+  summary: Toolbox is a collection of the Materials Data Facility tools and utilities.
+  description: |
+    Toolbox is a collection of the Materials Data Facility tools and utilities.
+  homepage: https://github.com/materials-data-facility/toolbox
+  repository: https://github.com/materials-data-facility/toolbox
+  documentation: https://github.com/materials-data-facility/toolbox
+
+extra:
+  recipe-maintainers:
+    - WardLT
+    - jan-janssen
